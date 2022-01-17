@@ -1,0 +1,32 @@
+.chat__section{
+    height: 100vh;
+    width: 100vh;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+}
+.chat__header{
+    display: flex;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.884);
+    max-height: 20px;
+    align-items: center;
+}
+.username_image{
+    height: 8vh;
+    border-radius: 30px;
+    margin-right: 1.4vh;
+}
+.header__username{
+    font-size: 17px;
+    color: rgb(58, 57, 57);
+}
+.header__bio{
+    font-size: 13px;
+}
+.header__text{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}

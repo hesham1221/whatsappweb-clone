@@ -1,9 +1,12 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    flex: 0.30;
+    flex: 0.43;
     height: 100%;
     border-right: 1px solid lightgray;
+}
+.avatar {
+    cursor: pointer;
 }
 .sidebar__header {
     display: flex;

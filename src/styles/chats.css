@@ -1,0 +1,41 @@
+.chatList__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+.chatsList{
+    display: flex;
+    align-items: center;
+    max-height: 70px;
+    border-bottom:1px solid lightgray;
+    padding: 2vh 0px;
+}
+.chatsList:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+.profile_pic{
+    height: 8vh;
+    border-radius: 50px;
+    margin-right: 15px;
+    min-height: 40px;
+    margin-left: 10px;
+}
+.lastmassage {
+    color: rgb(39, 38, 38);
+    word-wrap: break-word;
+
+}
+.chat_texts{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+.time{
+    margin-right: 1.4vw;
+    font-size: 12px;
+}
+.selected {
+    background-color: rgba(211, 211, 211, 0.829);
+}
