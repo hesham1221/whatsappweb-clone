@@ -17,6 +17,7 @@
 }
 .profile_pic{
     height: 8vh;
+    max-width: 50px;
     border-radius: 50px;
     margin-right: 15px;
     min-height: 40px;

@@ -4,37 +4,36 @@ import { db } from "../firebase-confige";
 import { useDispatch } from "react-redux";
 import { actions } from "../redux/user-slice";
 import "../styles/chats.css";
+import { useSelector } from "react-redux";
 const Chats = () => {
   const dispatch = useDispatch();
-  const [selectedUser, setSelectedUser] = useState();
   const username = "test";
-  const [chatsList, setChatsList] = useState([]);
-  const [userNamesList, setUserNamesList] = useState([]);
-  const selectChatHandler = (messages, userInfo) => {
+  const chatsList = useSelector(state=> state.userSlice.chatList);
+  const [selectedUser, setSelectedUser] = useState();
+  const selectChatHandler = (messages,id, userInfo) => {
     dispatch(actions.setMessages(messages));
     dispatch(actions.setUser(userInfo));
+    dispatch(actions.setId(id))
     setSelectedUser(userInfo.user_name);
   };
+
+  const [userNamesList, setUserNamesList] = useState([]);
+
   useEffect(() => {
-    const chatsCollections = collection(db, "chats");
     const userNames = collection(db, "users");
-    const getChats = async () => {
-      const chatsdata = await getDocs(chatsCollections);
-      setChatsList(
-        chatsdata.docs.map((chat) => ({ ...chat.data(), id: chat.id }))
-      );
-    };
     const getUsers = async () => {
       const users = await getDocs(userNames);
       setUserNamesList(
         users.docs.map((user) => ({ ...user.data(), id: user.id }))
       );
     };
-    getChats();
     getUsers();
   }, []);
+  
+
   return (
     <div className="chatList__container">
+      {}
       {chatsList.map((chat) => (
         <div
           className={`chatsList ${
@@ -44,6 +43,7 @@ const Chats = () => {
           onClick={() =>
             selectChatHandler(
               chat.messages,
+              chat.id,
               userNamesList.filter(
                 (name) =>
                   name.user_name ===
@@ -51,6 +51,7 @@ const Chats = () => {
               )[0]
             )
           }
+         
           key={chat.id}
         >
           <img
@@ -88,5 +89,4 @@ const Chats = () => {
     </div>
   );
 };
-
 export default Chats;

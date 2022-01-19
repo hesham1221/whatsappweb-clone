@@ -3,6 +3,8 @@ import { MoreVert, SearchOutlined } from "@material-ui/icons";
 import React from "react";
 import { useSelector } from "react-redux";
 import "../styles/chat.css";
+import ChatFooter from "./ChatFooter";
+import Message from "./Message";
 const Chat = () => {
   const username = useSelector((state) => state.userSlice.user);
   return (
@@ -10,7 +12,7 @@ const Chat = () => {
       <div className="chat__header">
         <img
           src={username ? username.profile_url : ""}
-          alt="profile pic"
+          alt="pic"
           className="username_image"
         />
         <div className="header__text">
@@ -28,9 +30,10 @@ const Chat = () => {
           </div>
         </div>
       </div>
-      <div>
-
-      </div>
+        <div className="chat__body">
+          <Message />
+        </div>
+        <ChatFooter />
     </div>
   );
 };

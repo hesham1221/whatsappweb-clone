@@ -1,0 +1,31 @@
+.message__body{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    flex :1
+}
+.message {
+    padding: 20px;
+    width: fit-content;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: start;
+    font-size: 17px;
+    font-weight: 500;
+    
+    
+}
+.sender{
+    margin-left:auto ;
+    background-color: #DCF8C6;
+}
+.reciver {
+    background-color: white;
+}
+.message-time{
+    font-size: 11px;
+    flex: 1;
+    text-align: end;
+}

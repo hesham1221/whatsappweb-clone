@@ -14,8 +14,10 @@
 }
 .username_image{
     height: 8vh;
+    max-width: 50px;
     border-radius: 30px;
     margin-right: 1.4vh;
+    cursor: pointer;
 }
 .header__username{
     font-size: 17px;
@@ -29,4 +31,14 @@
     justify-content: space-between;
     flex: 1;
     align-items: center;
+}
+.chat__body{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 81vh;
+    background-image:url(../assest/chatbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y:scroll ;
 }
