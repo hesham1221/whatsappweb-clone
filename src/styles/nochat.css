@@ -1,0 +1,23 @@
+.nochat{
+    flex: 1;
+    display: grid;
+    place-items: center;
+
+}
+.nochatmessage{
+    width: 70%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    text-align: center;
+}
+.nochat-logo{
+    max-width: 15vw;
+    margin-bottom:10vh ;
+}
+.warning {
+    margin-top: 3vh;
+    font-weight: bold;
+    color: rgb(197, 5, 5);
+}

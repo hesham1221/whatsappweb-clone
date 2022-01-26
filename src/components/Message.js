@@ -1,11 +1,7 @@
-import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { actions } from "../redux/user-slice";
-import { db } from "../firebase-confige";
+import { useSelector } from "react-redux";
 import "../styles/message.css";
 const Message = () => {
-  const dispatch = useDispatch();
   const messageRef = useRef();
   const user = useSelector((state) => state.userSlice.user.user_name);
   const id = useSelector((state) => state.userSlice.id);
@@ -21,17 +17,7 @@ const Message = () => {
   useEffect(() => {
     scrollToEnd();
   }, [messages]);
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "chats"), (snap) => {
-        dispatch(
-          actions.setChatList(
-            snap.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-          )
-        );
-      }),
-    []
-  );
+  
   return (
     <div className="message__body">
       {messages[0].messages.map((message) => (
