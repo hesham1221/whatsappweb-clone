@@ -21,3 +21,8 @@
     font-weight: bold;
     color: rgb(197, 5, 5);
 }
+@media (max-width:720px) {
+    .nochat{
+    display: none;
+    }
+}

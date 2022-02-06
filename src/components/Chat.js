@@ -1,15 +1,22 @@
 import { IconButton } from "@material-ui/core";
-import { MoreVert, SearchOutlined } from "@material-ui/icons";
+import { ArrowBack, MoreVert, SearchOutlined } from "@material-ui/icons";
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { actions } from "../redux/user-slice";
 import "../styles/chat.css";
 import ChatFooter from "./ChatFooter";
 import Message from "./Message";
 const Chat = () => {
   const username = useSelector((state) => state.userSlice.user);
+  const dispatch = useDispatch();
+  const showSelected = useSelector(state => state.userSlice.showSelected)
   return (
-    <div className="chat__section">
+    <div className={`chat__section ${!showSelected&&'notselected'}`}>
       <div className="chat__header">
+        <IconButton onClick={() =>dispatch(actions.setShowSelected(false))}>
+          <ArrowBack />
+        </IconButton>
         <img
           src={username ? username.profile_url : ""}
           alt="pic"

@@ -70,8 +70,8 @@
   flex-direction: column;
 }
 .userImage {
-  width: 19vw;
-  height: 26vh;
+  width: 120px;
+  height: 120px;
   max-width: 170px;
   max-height: 180px;
   border-radius: 250px;
@@ -97,4 +97,27 @@
 .existsh4{
   color: red;
   margin-top:-20px ;
+}
+
+@media (max-width:720px) {
+  .auth__input{
+    width: 70%;
+  }
+  .auth__body{
+    width: 90vw;
+    height: 90vh;
+  }
+  .auth__logo{
+    margin-top: 30px;
+    width: 45vw;
+  }
+  .controls{
+    margin-top: 8vh;
+  }
+  .next-section >input{
+    width: 70%;
+  }
+  .next-section {
+    margin-top: 20px;
+  }
 }

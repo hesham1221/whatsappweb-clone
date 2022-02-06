@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Attachment, InsertEmoticon, Mic } from "@material-ui/icons/";
+import React, { useEffect, useRef, useState } from "react";
+import { Attachment, InsertEmoticon} from "@material-ui/icons/";
+import{IoSendSharp} from 'react-icons/io5'
 import "../styles/chat-footer.css";
 import { IconButton } from "@material-ui/core";
 import { collection, doc, getDoc, addDoc, updateDoc } from "firebase/firestore";
@@ -72,9 +73,9 @@ const ChatFooter = () => {
           <EmojiPicker
             onEmojiClick={emojiClickHandler}
             pickerStyle={{
-              marginTop: "-53vh",
+              marginTop: "-330px",
               position: "absolute",
-              width: "30vw",
+              width: "66vw",
             }}
           />
         )}
@@ -95,8 +96,8 @@ const ChatFooter = () => {
           className="search-input"
         />
       </div>
-      <IconButton>
-        <Mic />
+      <IconButton onClick={sendMessageHandler}>
+        <IoSendSharp />
       </IconButton>
     </form>
   );

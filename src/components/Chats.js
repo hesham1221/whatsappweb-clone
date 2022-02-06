@@ -50,6 +50,7 @@ const Chats = () => {
       dispatch(actions.setUser(userInfo));
       setSelectedUser(userInfo.user_name);
     }
+    dispatch(actions.setShowSelected(true));
   };
 
   const userNamesList = useSelector((state) => state.userSlice.users);

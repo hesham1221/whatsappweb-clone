@@ -74,3 +74,31 @@
   .sidebar__chats::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+.logoutlist{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.logout{
+    position: absolute;
+    top: 55px;
+    left: -12px;
+    background-color: white;
+    padding: 12px 0;
+}
+.logout >span{
+    padding: 8px 12px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.logout >span:hover{
+    background-color:whitesmoke ;
+    width: 100%;
+}
+  @media (max-width : 720px) {
+      .notselected {
+          display: none;
+      }
+      .sidebar{flex: 1;}
+  }

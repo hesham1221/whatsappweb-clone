@@ -7,14 +7,15 @@
 .message {
     padding: 20px;
     width: fit-content;
-    height: 30px;
+    min-height: 30px;
     min-width: 30px;
     margin-top: 20px;
     border-radius: 10px;
     text-align: start;
     font-size: 17px;
     font-weight: 500;
-    
+    max-width: 400px;
+    word-wrap: break-word;
     
 }
 .sender{
@@ -28,4 +29,9 @@
     font-size: 11px;
     flex: 1;
     text-align: end;
+}
+@media (max-width:720px) {
+    .message{
+        max-width: 200px;
+    }
 }

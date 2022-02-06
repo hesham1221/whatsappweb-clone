@@ -3,6 +3,8 @@
     flex-direction: column;
     position: relative;
     height: 100%;
+    flex: 1;
+    max-width: 100%;
 }
 .chatsList{
     display: flex;
@@ -10,23 +12,23 @@
     max-height: 70px;
     border-bottom:1px solid lightgray;
     padding: 2vh 0px;
+    max-width: 100%;
 }
 .chatsList:hover{
     background-color: lightgray;
     cursor: pointer;
 }
 .profile_pic{
-    height: 8vh;
-    max-width: 50px;
+    height: 55px;
+    width:55px;
     border-radius: 50px;
     margin-right: 15px;
-    min-height: 40px;
     margin-left: 10px;
 }
 .lastmassage {
     color: rgb(39, 38, 38);
     word-wrap: break-word;
-
+    max-width: 200px;
 }
 .chat_texts{
     display: flex;

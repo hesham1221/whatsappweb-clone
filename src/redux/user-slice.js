@@ -8,7 +8,8 @@ const initialState = {
   isLogin :false,
   myUser : {user_name : '' ,email :'' , prifile_url :'',bio :'',uid :''},
   users : [],
-  showUsers : false
+  showUsers : false,
+  showSelected : false,
 };
 const userSlice = createSlice({
   name: "user",
@@ -37,6 +38,9 @@ const userSlice = createSlice({
     },
     setShowUsers(state){
       state.showUsers = !state.showUsers
+    },
+    setShowSelected(state,action){
+      state.showSelected = action.payload
     }
   },
 });
