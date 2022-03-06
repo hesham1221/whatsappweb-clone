@@ -1,5 +1,5 @@
 <h1>whatsapp clone by hesham mohamed</h1>
-preview this site in <a href='www.whatsapp-clone.ml' target='_blank'>whatsapp-clone</a>
+review this site at <a href='www.whatsapp-clone.ml' target='_blank'>whatsapp-clone</a>
 
 <h2>Tools</h2>
 <ul>
